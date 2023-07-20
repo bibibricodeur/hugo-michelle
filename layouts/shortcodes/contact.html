@@ -1,0 +1,32 @@
+<h3 class="text-white">Contact: {{ .Site.Params.author }}</h3>
+
+<section class="flex-row lg:flex lg:justify-between">
+
+    <div class="lg:container lg:w-6/12 mx-auto text-white">
+        <form action="" class="my-3 flex flex-col">
+            <label for="email" class="font-bold">Email</label>
+            <input type="email" name="email" id="email" class="border border-purple-300 my-3 p-3 rounded text-black"
+                placeholder="Your email for response!">
+            <label for="sujet" class="font-bold">Subject</label>
+            <input type="text" name="subject" id="subject" class="border border-purple-300 my-3 p-3 rounded text-black"
+                placeholder="Your subject">
+            <input type="hidden" name="joke" id="joke">
+            <label for="grief" class="font-bold">Grief</label>
+            <textarea name="grief" id="grief" cols="36" rows="18" class="border border-purple-300 my-3 p-3 rounded text-black"
+                placeholder="Your text"></textarea>
+            <button type="submit"
+                class="py-3 font-medium rounded-lg bg-sky-600 text-sky-50 hover:bg-sky-300 hover:transition hover:duration-300 border border-sky-900">Submit</button>
+        </form>
+    </div>
+
+    <div id="map" class="my-6 lg:container lg:w-5/12 mx-auto bg-white h-96 lg:h-auto"></div>
+
+</section>
+
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin=""></script>
+
+{{ $leaflet := resources.Get "js/leaflet.js" }}
+<script src="{{- $leaflet.Permalink | relURL -}}"></script>

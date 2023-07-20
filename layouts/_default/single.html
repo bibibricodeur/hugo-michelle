@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+<main class="bg-purple-900">
+
+        <article class="">
+
+            <section class="mx-3 px-3 py-3">
+                <a class="text-2xl font-bold" href="{{ .Site.BaseURL }}">{{- .Title -}}</a>
+                <p class="">{{ .Content }}</p>
+                <p class="text-white">
+                    {{ $title := "Contact" }}
+                    {{ if not (eq $title .Page.Title) }}
+                    {{ if .Date }} {{ .Date.Format "02/01/2006" }} | {{ end }} {{ .Site.Params.author | default "Anonymous" }}
+                    {{ end }}
+                </p>
+            </section>
+            
+        </article>
+
+    </main>
+
+
+{{ end }}

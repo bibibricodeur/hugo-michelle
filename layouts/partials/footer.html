@@ -1,0 +1,29 @@
+<footer class="px-3 py-6 bg-gradient-to-r from-purple-600 to-purple-900 text-purple-50">
+	<div class="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
+		<div class="flex flex-row space-x-8 lg:space-x-4">
+			<img src="{{ .Site.BaseURL }}/img/2.JG_20_emblem.svg" class="w-9 h-9" alt="Logo cat">
+			<ul class="flex flex-wrap items-center space-x-4 sm:space-x-8">
+                <li>
+					Carrossé par <a href="https://tailwindcss.com/" class="underline hover:no-underline">Tailwind CSS</a> & <a href="https://thierrycharriot.github.io" class="underline hover:no-underline">Thierry Charriot</a>. Motorisé par <a href="https://gohugo.io/"  class="underline hover:no-underline">Hugo</a> 
+                </li>
+			</ul>
+		</div>
+		<ul class="flex flex-wrap pl-3 space-x-4 sm:space-x-8">
+			<li>
+				<a class="underline hover:no-underline" href="https://fr-fr.facebook.com/michelle.gasch.5">Facebook</a>
+			</li>
+		</ul>
+	</div>
+</footer>
+
+{{ $scripts := resources.Get "js/scripts.js" }}
+<script src="{{- $scripts.Permalink | relURL -}}"></script>
+
+{{ $lightboxjs := resources.Get "js/lightbox.js" }}
+<script src="{{- $lightboxjs.Permalink | relURL -}}"></script>
+
+
+
+
+
+

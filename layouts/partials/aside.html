@@ -1,0 +1,48 @@
+<aside class="m-3 p-3 border bg-stone-100 shadow md:basis-1/4">
+
+    <h3 class="text-2xl font-bold">Dernier(s) article(s)</h3>
+    <ul class="my-3">
+        {{ $title := .Title }}
+        {{ range first 6 .Site.RegularPages.ByDate.Reverse }}
+        {{ if not .Params.draft }}
+        <li class="my-1 md:my-0">
+            <a href="{{ .Permalink }}"
+                class="block p-3 hover:bg-stone-600 hover:text-stone-50 hover:transition hover:duration-300 hover:underline {{ if eq $title .Page.Title }} bg-stone-600 text-white {{ end }}">{{
+                .Title }}</a>
+        </li>
+        {{ end }}
+        {{ end }}
+        {{/* printf "%#v" $title }}<hr>{{ printf "%#v" .Page.Title */}}
+    </ul>
+
+    <h3 class="text-2xl font-bold">Catégorie(s)</h3>
+    <ul class="my-3">
+        {{ $title := .Title }}
+        {{ range $taxonomy := .Site.Taxonomies.categories }}
+        {{ $count := len $taxonomy.Pages }}
+        {{ if gt $count 0 }}
+        <li class="my-1 md:my-0">
+            <a href="{{ .Page.Permalink }}"
+                class="block p-3 hover:bg-stone-600 hover:text-stone-50 hover:transition hover:duration-300 hover:underline {{ if eq $title .Page.Title }} bg-stone-600  text-white {{ end }}">{{
+                .Page.Title }}&ensp;&ensp;<span class="bg-stone-600 rounded-full px-1 text-white">{{ $count }}</span></a>
+        </li>
+        {{ end }}
+        {{ end }}
+    </ul>
+
+    <h3 class="text-2xl font-bold">Tag(s)</h3>
+    <ul class="my-3">
+        {{ $title := .Title }}
+        {{ range $taxonomy := .Site.Taxonomies.tags }}
+        {{ $count := len $taxonomy.Pages }}
+        {{ if gt $count 0 }}
+        <li class="my-1 md:my-0">
+            <a href="{{ .Page.Permalink }}"
+                class="block p-3 hover:bg-stone-600 hover:text-stone-50 hover:transition hover:duration-300 hover:underline  {{ if eq $title .Page.Title }} bg-stone-600 text-white {{ end }}">{{
+                .Page.Title }}&ensp;&ensp;<span class="bg-stone-600 rounded-full px-1 text-white">{{ $count }}</span></a>
+        </li>
+        {{ end }}
+        {{ end }}
+    </ul>
+
+</aside>

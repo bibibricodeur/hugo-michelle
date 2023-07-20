@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+    <main class="container mx-auto flex flex-col md:flex-row">
+
+        <article class="border bg-stone-100 shadow md:basis-3/4">
+
+            <h1 class="text-3xl font-bold text-center">{{- .Title -}}</h1>
+
+            {{ range .Paginator.Pages }}
+
+            <section class="m-3 p-3 border bg-white rounded">
+                <a class="text-2xl font-bold" href="{{ .RelPermalink }}">{{- .Title -}}</a>
+                <p class="my-3">{{ .Summary }}</p>
+                {{ if .Truncated }}
+                <p>
+                    <a class="block text-center w-36 py-1 bg-stone-100 border border-stone-600 rounded-md hover:bg-stone-300 hover:transition hover:duration-300 hover:underline" href="{{ .RelPermalink }}">Read more →</a>
+                </p>
+                {{ end }}
+            </section>
+    
+            {{ end }}
+
+            {{- partial "includes/pagination" . -}}
+
+        </article>
+
+        {{- partial "aside.html" . -}}
+
+    </main>
+
+{{ end }}

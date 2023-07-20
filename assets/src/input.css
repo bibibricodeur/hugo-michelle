@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p {
+    @apply py-3;
+}
+
+.bibi-elevator {
+    @apply block px-6 py-3 font-medium rounded-lg bg-purple-600 text-purple-50 fixed right-3 bottom-24 z-50 border border-purple-300 underline hover:no-underline hover:bg-purple-300 hover:text-stone-900 hover:transition hover:duration-300;
+}
+
+html { scroll-behavior: smooth; }
+article section a { color: lightskyblue; text-decoration: underline; } article section a:hover { text-decoration: none; }
+code { margin: 0.6rem 0; color: brown; white-space: pre-line; }
+
+/* Lightbox */
+/* https://www.youtube.com/watch?v=2R525oEOl2s */
+.lightbox {
+    display: none; 
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+}
+.lightbox.show {
+    display: initial;    
+}
+.lightbox-content {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animateOpen;
+    animation-duration: 1.8s;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 98vh;
+    margin: auto;
+}
+.close {
+    font-size: 3rem;
+    position: fixed;
+    top: 6px;
+    right: 18px;
+    cursor: pointer;
+}
+
+
+/* Add Animation */
+
+@keyframes animateOpen {
+    from {opacity: 0}
+    to {opacity: 1}
+}
