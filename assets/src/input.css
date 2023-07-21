@@ -7,7 +7,7 @@ p {
 }
 
 .bibi-elevator {
-    @apply block px-6 py-3 font-medium rounded-lg bg-purple-600 text-purple-50 fixed right-3 bottom-24 z-50 border border-purple-300 underline hover:no-underline hover:bg-purple-300 hover:text-stone-900 hover:transition hover:duration-300;
+    @apply bg-purple-600 hover:bg-purple-900 text-purple-50 font-bold py-3 px-3 border border-purple-900 rounded fixed right-3 bottom-12 z-50 hover:border-purple-100 hover:transition hover:duration-300;
 }
 
 html { scroll-behavior: smooth; }
@@ -54,9 +54,7 @@ code { margin: 0.6rem 0; color: brown; white-space: pre-line; }
     cursor: pointer;
 }
 
-
 /* Add Animation */
-
 @keyframes animateOpen {
     from {opacity: 0}
     to {opacity: 1}
