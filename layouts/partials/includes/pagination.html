@@ -10,21 +10,21 @@
     {{ if ne $paginator.PageNumber 1 }}
     <li class="pmx-1">
       <a href="{{ $paginator.First.URL }}"
-        class="prelative block px-3 py-1.5 bg-white border border-stone-900 rounded hover:bg-stone-300">««</a>
+        class="prelative block px-3 py-1.5 bg-stone-50 border border-stone-900 rounded hover:bg-stone-300">««</a>
     </li>
     {{ end }}
     <!-- Previous page. -->
     {{ if $paginator.HasPrev }}
     <li class="mx-1">
       <a href="{{ $paginator.Prev.URL }}"
-        class="relative block px-3 py-1.5 bg-white border border-stone-900 rounded hover:bg-stone-300">«</a>
+        class="relative block px-3 py-1.5 bg-stone-50 border border-stone-900 rounded hover:bg-stone-300">«</a>
     </li>
     {{ end }}
     <!-- Page numbers. -->
     {{ range $paginator.Pagers }}
     <li class="mx-1">
       <a href="{{ .URL }}"
-        class="relative block px-3 py-1.5 bg-white border border-stone-900 rounded hover:bg-stone-300 {{ if eq . $paginator }} bg-zinc-600 text-white {{ end }}">{{
+        class="relative block px-3 py-1.5 bg-stone-50 border border-stone-900 rounded hover:bg-stone-300 hover:text-stone-600 {{ if eq . $paginator }} bg-stone-700 text-stone-50 {{ end }}">{{
         .PageNumber }}</a>
     </li>
     {{ end }}
@@ -32,14 +32,14 @@
     {{ if $paginator.HasNext }}
     <li class="mx-1">
       <a href="{{ $paginator.Next.URL }}"
-        class="relative block px-3 py-1.5 bg-white border border-stone-900 rounded hover:bg-stone-300">»</a>
+        class="relative block px-3 py-1.5 bg-stone-50 border border-stone-900 rounded hover:bg-stone-300">»</a>
     </li>
     {{ end }}
     <!-- Last page. -->
     {{ if ne $paginator.PageNumber $paginator.TotalPages }}
     <li class="mx-1">
       <a href="{{ $paginator.Last.URL }}"
-        class="relative block px-3 py-1.5 bg-white border border-stone-900 rounded hover:bg-stone-300">»»</a>
+        class="relative block px-3 py-1.5 bg-stone-50 border border-stone-900 rounded hover:bg-stone-300">»»</a>
     </li>
     {{ end }}
   </ul>

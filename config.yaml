@@ -1,10 +1,11 @@
 # Basic setup
 #baseURL:        ''
+#baseURL:        'http://localhost/Public/public-michelle/'
 baseURL:        'https://mimigasch.netlify.app'
 languageCode:   'fr-FR'
 title:          'mimigasch'
 
-#publishDir:     '/opt/lampp/htdocs/Public/public-michelle'
+publishDir:     '/opt/lampp/htdocs/Public/public-michelle'
 
 # Content setup
 paginate:       9
@@ -13,5 +14,5 @@ paginate:       9
 params:
   author:       'Michelle Gasch'
   description:  'Plongez dans la tranquillité avec nos coloriages adultes zen. Libérez votre créativité et trouvez la sérénité intérieure. Découvrez notre collection apaisante dès maintenant!'
-  email:        'mimigasch (signe bizarre) gmail.com'
+  email:        'mimigasch(signe bizarre)gmail.com'
   github:       'https://github.com/bibibricodeur'
