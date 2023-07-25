@@ -1,11 +1,14 @@
 {{ define "main" }}
 
-<main class="bg-purple-900">
+<main class="container mx-auto">
 
-        <article class="">
+        <article class="p-6">
 
-            <section class="mx-3 px-3 py-3">
-                <a class="text-2xl font-bold" href="{{ .Site.BaseURL }}">{{- .Title -}}</a>
+            <section class="">
+                <div class="bg-purple-50 border border-purple-600 px-3 py-3 my-6 rounded relative text-center">
+                    <h1 class="text-2xl font-bold text-stone-900">{{- .Title -}}</h1>
+                </div>
+            
                 <p class="">{{ .Content }}</p>
                 <p class="text-white">
                     {{ $title := "Contact" }}
