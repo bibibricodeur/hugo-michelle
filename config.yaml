@@ -1,6 +1,5 @@
 # Basic setup
-#baseURL:        ''
-#baseURL:        'http://localhost/Public/public-michelle/'
+#baseURL:        '''
 baseURL:        'https://mimigasch.netlify.app'
 languageCode:   'fr-FR'
 title:          'mimigasch'
