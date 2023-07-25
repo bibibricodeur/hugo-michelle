@@ -5,7 +5,8 @@ baseURL:        'https://mimigasch.netlify.app'
 languageCode:   'fr-FR'
 title:          'mimigasch'
 
-publishDir:     '/opt/lampp/htdocs/Public/public-michelle'
+#publishDir:     '/opt/lampp/htdocs/Public/public-michelle'
+# Commenter obligatoirement pour netlify. D'ou le npm run prod
 
 # Content setup
 paginate:       9
