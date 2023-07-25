@@ -1,5 +1,5 @@
 # Basic setup
-#baseURL:        '''
+#baseURL:        ''
 baseURL:        'https://mimigasch.netlify.app'
 languageCode:   'fr-FR'
 title:          'mimigasch'
