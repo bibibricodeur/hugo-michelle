@@ -2,14 +2,14 @@
 
 <main class="container mx-auto">
 
-        <article class="p-6">
+    <article class="p-3 lg:p-6">
 
-            <section class="">
-                <div class="bg-purple-50 border border-purple-600 px-3 py-3 my-6 rounded relative text-center">
-                    <h1 class="text-2xl font-bold text-stone-900">{{- .Title -}}</h1>
-                </div>
+        <section class="text-purple-50">
+            <div class="bg-purple-800 border border-purple-600 p-3 my-6 rounded relative text-center">
+                <h1 class="text-3xl font-bold text-purple-50">{{ .Title }}</h1>
+            </div>
             
-                <p class="">{{ .Content }}</p>
+                {{ .Content }}
                 <p class="text-white">
                     {{ $title := "Contact" }}
                     {{ if not (eq $title .Page.Title) }}
