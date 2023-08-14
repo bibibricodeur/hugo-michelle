@@ -6,6 +6,7 @@ title:          'mimigasch'
 
 #publishDir:     '/opt/lampp/htdocs/Public/public-michelle'
 # Commenter obligatoirement pour netlify. D'ou le npm run prod
+googleAnalytics: G-92V14G13XF
 
 # Content setup
 paginate:       9
