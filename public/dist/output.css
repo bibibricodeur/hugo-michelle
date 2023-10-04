@@ -1058,7 +1058,7 @@ code {
 }
 
 section img {
-  max-width: 640px;
+  max-width: 480px;
   aspect-ratio: 4 / 3;
 }
 
