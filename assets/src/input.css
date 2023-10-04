@@ -14,6 +14,8 @@ html { scroll-behavior: smooth; }
 article section a { color: lightskyblue; text-decoration: underline; } article section a:hover { text-decoration: none; }
 code { margin: 0.6rem 0; color: brown; white-space: pre-line; }
 
+section img { max-width: 640px; aspect-ratio: 4 / 3; }
+
 /* Lightbox */
 /* https://www.youtube.com/watch?v=2R525oEOl2s */
 .lightbox {

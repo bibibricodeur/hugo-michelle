@@ -1,15 +1,14 @@
 {
-  "name": "hugo-michelle",
+  "name": "hugo-mimigasch",
   "version": "1.0.0",
-  "description": "",
-  "main": "tailwind.config.js",
+  "description": "Personnal gallery with Hugo generator",
+  "main": "itailwind.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "hugo server & tailwindcss -i ./assets/src/input.css -o ./assets/dist/output.css --watch",
 
-    "prod": "tailwindcss -i ./assets/src/input.css -o ./assets/dist/output.css --minify"
+    "prod": "hugo && tailwindcss -i ./assets/src/input.css -o ./assets/dist/output.css --minify"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "bibibricodeur",
+  "license": "UNLICENSED"
 }
