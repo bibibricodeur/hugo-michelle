@@ -4,8 +4,9 @@ baseURL:        'https://mimigasch.netlify.app'
 languageCode:   'fr-FR'
 title:          'mimigasch'
 
-#publishDir:     '/opt/lampp/htdocs/Public/public-michelle'
-# Commenter obligatoirement pour netlify. D'ou le npm run prod
+#publishDir:     '/home/lin/SyncFree/FreePublic/docker-compose-lamp/www/Desktop/public-michelle'
+# Commenter obligatoirement pour netlify.
+
 googleAnalytics: G-92V14G13XF
 
 # Content setup
